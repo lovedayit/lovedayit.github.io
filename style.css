@@ -71,32 +71,36 @@ img {
   color: red;
 }
 
+#anni {
+      display: none;
+}
+
 #born {
   font-weight: 300;
   color: black;
 }
 
-#thoigian {
+.time {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#thoigian h2, #thoigian p {
+.time h2, .time p {
   margin: 0;
   margin-bottom: 4px;
 }
 
-#thoigian h2 {
+.time h2 {
   font-size: 2.8rem;
 }
 
-#thoigian p {
+.time p {
   font-size: 1.5rem;
 }
 
-#thoi-gian {
+.sup-time {
   font-weight: 300;
 }
 
@@ -146,7 +150,7 @@ img {
     width: 84%;
     margin-bottom: 2rem;
   }
-
+  
   #title1 {
     margin: 2rem 0 1rem 0;
     font-size: 18px;
@@ -172,7 +176,7 @@ img {
     font-size: 13px;
   }
 
-  #info1:last-child .avatar {
+  #info1:last-child #avatar {
     order: 0;
   }
 

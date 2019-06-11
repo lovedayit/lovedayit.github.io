@@ -1,22 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-  
-  var days = document.querySelector('#ngays span');
-  var hour = document.querySelector('#gio');
-  var min = document.querySelector('#phut');
-  var second = document.querySelector('#giay');
+const yourDate = new Date("2019-06-02T02:10:26"),
+music = ['noitachoem', 'noinaycoanh', 'nguoiamphu'];
 
-  var startDate = new Date(2017, 10, 04);
-  days.innerText = Math.floor((new Date - startDate)/86400000);
-  countTime();
+document.addEventListener('DOMContentLoaded', function(){
+      var rootTime = document.querySelector("time");
 
-  function countTime() {
-    let today = new Date();
-    let ms = (today - startDate) % 86400000;
-    hour.innerText = Math.floor(ms / 3600000);
-    min.innerText = Math.floor(ms % 3600000 / 60000);
-    second.innerText = Math.floor(ms % 3600000 % 60000 / 1000);
-  }
+      document.querySelector("anni").textContent = `${(yourDate.getDate()>9)?yourDate.getDate():"0"+yourDate.getDate()}-${(yourDate.getMonth()>8)?(yourDate.getMonth()+1):"0"+(yourDate.getMonth()+1)}-${yourDate.getFullYear()}`;
+      
+      document.querySelector("date").textContent = Math.floor( Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24)+" Ngày";
 
-  setInterval(countTime, 1000);
+      function olock() {
+            var today = new Date(),
+            hrs = (Math.floor( Math.floor((today - yourDate) / 1000) / 60 / 60)) % 24,
+            min = (Math.floor( Math.floor((today - yourDate) / 1000) / 60)) % 60,
+            sec =  Math.floor((today - yourDate) / 1000) % 60;
+            rootTime.textContent = `${(hrs>9)?hrs:"0"+hrs}:${(min>9)?min:"0"+min}:${(sec>9)?sec:"0"+sec}`;
+      } olock();
+      var timer = setInterval(function(){olock()}, 1000);
+      document.querySelector("audio").setAttribute("src", `music/${music[Math.floor(Math.random()*music.length)]}.mp3`);
+
+      document.getElementsByTagName("body")[0].insertAdjacentHTML(
+            "beforeend",
+            "<div id='mask'></div>"
+      );
 
 }, false);
