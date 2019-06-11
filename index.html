@@ -2,15 +2,20 @@
 <html lang="vn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no">
+  <!-- Js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!---->
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./img/heart.png">
   <script src="./main.js"></script>
-  <title>Đếm ngày yêu nhau</title>
+  <title>Đếm ngày</title>
 </head>
 <body>
   
-  <h1 id="title1">Đếm Ngày Yêu Nhau <3 </h1>
+  <h1 id="title1">Đếm Ngày <3 </h1>
 
   <div id="hop">
 
@@ -28,10 +33,10 @@
         </div>
 
         <div id="info1">
-          <img src="./img/nguoiayoi.jpg" id="avatar1">
+          <img src="./img/anh1.jpg" id="avatar1">
           <div id="details">
-            <p id="ten">Người Ấy Ơi</p>
-            <p id="born">00.00.2002</p>
+            <p id="ten">Ba Cây Chổi</p>
+            <p id="born">12.08.2002</p>
           </div>
         </div>
     </div>
@@ -42,12 +47,43 @@
       </p>
     </div>
     <center> <p> Kể từ ngày <anni style="color:red"> ... </anni> </p> </center>
-     <br>
-    <img src="img/yourname.jpg">
-    <p id="camon"> Cảm ơn Tình Yêu của bạn! </p> <br>
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+          <div class="item active">
+              <img src="img/tenkinoko1.jpg" width="100%">
+          </div>
+          <div class="item">
+              <img src="img/yourname.jpg" width="100%">
+          </div>
+          <div class="item">
+              <img src="img/tenkinoko2.jpg" width="100%">
+          </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Lùi Lại</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Tiếp Theo</span>
+      </a>
+      </div>
+    <p id="camon">💕 Cảm ơn Tình Yêu của bạn 💕 </p> <br>
     <div id="music">
       <center> <audio loop autoplay controls> Trình duyệt của bạn không hỗ trợ nghe nhạc.</audio> </center>
   </div>
   </div>
 </body>
-</html
+</html>
