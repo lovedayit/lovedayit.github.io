@@ -1,10 +1,10 @@
-const yourDate = new Date("2019-05-07T16:42:00"),
-music = ['always', 'everytime', 'foryou', 'yumetourou'];
+const yourDate = new Date("2020-09-23T17:59:00"), // Ngày 23/09/2020 - 17h59
+music = ['music1', 'music2', 'music3', 'music4'];
 
 document.addEventListener('DOMContentLoaded', function(){
       var rootTime = document.querySelector("time");
 
-      document.querySelector("anni").textContent = `${(yourDate.getDate()>9)?yourDate.getDate():"0"+yourDate.getDate()}-${(yourDate.getMonth()>8)?(yourDate.getMonth()+1):"0"+(yourDate.getMonth()+1)}-${yourDate.getFullYear()}`;
+      document.querySelector("anni").textContent = `${(yourDate.getDate()>9)?yourDate.getDate():"0"+yourDate.getDate()} / ${(yourDate.getMonth()>8)?(yourDate.getMonth()+1):"0"+(yourDate.getMonth()+1)} / ${yourDate.getFullYear()}`;
       
       document.querySelector("date").textContent = Math.floor( Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24)+" Ngày";
 
